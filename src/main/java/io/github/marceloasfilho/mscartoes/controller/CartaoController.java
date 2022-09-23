@@ -58,8 +58,12 @@ public class CartaoController {
         List<CartaoCliente> cartaoClientes = this.cartaoClienteService.obterCartoesPorCpf(cpf);
         List<CartaoClienteDTO> result = cartaoClientes
                 .stream()
-                .map(CartaoClienteDTO::new)
-                .collect(Collectors.toList());
+                .map(c -> CartaoClienteDTO
+                        .builder()
+                        .cpf(c.getCpf())
+                        .bandeira(c.getCartao().getBandeira().toString())
+                        .limite(c.getLimite())
+                        .build()).collect(Collectors.toList());
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
