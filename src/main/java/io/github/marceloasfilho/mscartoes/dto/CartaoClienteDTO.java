@@ -1,6 +1,5 @@
 package io.github.marceloasfilho.mscartoes.dto;
 
-import io.github.marceloasfilho.mscartoes.entity.CartaoCliente;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
