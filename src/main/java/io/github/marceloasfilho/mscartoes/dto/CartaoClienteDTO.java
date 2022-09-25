@@ -13,13 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 public class CartaoClienteDTO {
-    private String cpf;
+    private String nome;
     private String bandeira;
     private BigDecimal limite;
-
-    public CartaoClienteDTO(CartaoCliente cartaoCliente) {
-        this.cpf = cartaoCliente.getCpf();
-        this.bandeira = cartaoCliente.getCartao().getBandeira().toString();
-        this.limite = cartaoCliente.getLimite();
-    }
 }

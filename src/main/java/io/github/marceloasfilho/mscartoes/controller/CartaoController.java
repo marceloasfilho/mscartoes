@@ -60,7 +60,7 @@ public class CartaoController {
                 .stream()
                 .map(c -> CartaoClienteDTO
                         .builder()
-                        .cpf(c.getCpf())
+                        .nome(c.getCartao().getNome())
                         .bandeira(c.getCartao().getBandeira().toString())
                         .limite(c.getLimite())
                         .build()).collect(Collectors.toList());
