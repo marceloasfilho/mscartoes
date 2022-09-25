@@ -53,7 +53,7 @@ public class CartaoController {
     }
 
     @GetMapping(path = "/cpf", params = "cpf")
-    public ResponseEntity<List<CartaoClienteDTO>> obterCartoesPorCpf(@RequestParam("cpf") String cpf){
+    public ResponseEntity<List<CartaoClienteDTO>> obterCartoesPorCpf(@RequestParam("cpf") String cpf) {
         List<CartaoCliente> cartaoClientes = this.cartaoClienteService.obterCartoesPorCpf(cpf);
         List<CartaoClienteDTO> result = cartaoClientes
                 .stream()
