@@ -29,9 +29,8 @@ public class CartaoController {
     }
 
     @GetMapping(path = "/status")
-    public String status() {
+    public void status() {
         log.info("Status MSCARTOES");
-        return "Status MSCARTOES";
     }
 
     @PostMapping(path = "/salvar")

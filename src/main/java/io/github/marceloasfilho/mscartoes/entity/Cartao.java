@@ -1,17 +1,18 @@
 package io.github.marceloasfilho.mscartoes.entity;
 
 import io.github.marceloasfilho.mscartoes.enums.BandeiraCartaoEnum;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Data
 @NoArgsConstructor
+@Getter
+@Setter
 public class Cartao {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,11 +21,4 @@ public class Cartao {
     private BandeiraCartaoEnum bandeira;
     private BigDecimal renda;
     private BigDecimal limite;
-
-    public Cartao(String nome, BandeiraCartaoEnum bandeira, BigDecimal renda, BigDecimal limite) {
-        this.nome = nome;
-        this.bandeira = bandeira;
-        this.renda = renda;
-        this.limite = limite;
-    }
 }

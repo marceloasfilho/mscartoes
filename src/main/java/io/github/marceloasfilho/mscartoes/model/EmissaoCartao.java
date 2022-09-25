@@ -1,4 +1,4 @@
-package io.github.marceloasfilho.mscartoes.entity;
+package io.github.marceloasfilho.mscartoes.model;
 
 import lombok.Data;
 

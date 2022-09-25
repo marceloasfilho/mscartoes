@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.marceloasfilho.mscartoes.entity.Cartao;
 import io.github.marceloasfilho.mscartoes.entity.CartaoCliente;
-import io.github.marceloasfilho.mscartoes.entity.EmissaoCartao;
+import io.github.marceloasfilho.mscartoes.model.EmissaoCartao;
 import io.github.marceloasfilho.mscartoes.repository.CartaoClienteRepository;
 import io.github.marceloasfilho.mscartoes.repository.CartaoRepository;
 import lombok.AllArgsConstructor;

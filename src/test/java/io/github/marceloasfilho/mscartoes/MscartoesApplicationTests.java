@@ -9,5 +9,4 @@ class MscartoesApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }

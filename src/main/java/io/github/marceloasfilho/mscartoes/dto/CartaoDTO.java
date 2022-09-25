@@ -13,7 +13,12 @@ public class CartaoDTO {
     private BigDecimal renda;
     private BigDecimal limite;
 
-    public Cartao toModel(){
-        return new Cartao(this.nome, this.bandeira, this.renda, this.limite);
+    public Cartao toModel() {
+        Cartao cartao = new Cartao();
+        cartao.setBandeira(this.bandeira);
+        cartao.setNome(this.nome);
+        cartao.setRenda(this.renda);
+        cartao.setLimite(this.limite);
+        return cartao;
     }
 }
